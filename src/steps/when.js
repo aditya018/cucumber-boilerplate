@@ -15,9 +15,14 @@ import setCookie from '../support/action/setCookie';
 import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
 import submitForm from '../support/action/submitForm';
+import updateConfig from '../support/action/dashBoardActions/updateConfig';
 
 const { When } = require('cucumber');
 
+When (
+    /^I update width "([^"]*)?" and height "([^"]*)?"$/,
+    updateConfig
+);
 
 When(
     /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,

@@ -18,9 +18,20 @@ import isEnabled from '../support/check/isEnabled';
 import isVisible from '../support/check/isVisible';
 import openWebsite from '../support/action/openWebsite';
 import resizeScreenSize from '../support/action/resizeScreenSize';
+import loginDashboard from '../support/action/dashboardActions/loginDashboard';
+import openPlayerConfig from '../support/action/dashboardActions/openPlayerConfig';
 
 const { Given } = require('cucumber');
 
+Given(
+    /^I login with email "([^"]*)?" and password "([^"]*)?"$/,
+    loginDashboard
+);
+
+Given(
+    /^I open player config for "([^"]*)?"$/,
+    openPlayerConfig
+);
 
 Given(
     /^I open the (url|site) "([^"]*)?"$/,

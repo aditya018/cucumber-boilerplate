@@ -29,9 +29,14 @@ import isVisible from '../support/check/isVisible';
 import waitFor from '../support/action/waitFor';
 import waitForVisible from '../support/action/waitForVisible';
 import checkIfElementExists from '../support/lib/checkIfElementExists';
+import checkPlayerConfig from '../support/check/dashboardCheck/checkPlayerConfig';
 
 const { Then } = require('cucumber');
 
+Then (
+    /^I expect width "([^"]*)?" and height "([^"]*)?"$/,
+    checkPlayerConfig
+);
 
 Then(
     /^I expect that the title is( not)* "([^"]*)?"$/,
